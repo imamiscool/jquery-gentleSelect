@@ -72,6 +72,24 @@
         $('#clear-example8').click(function() {
             $('#example8').gentleSelect("clear");
         });
+        $('#example9').gentleSelect({
+            columns: 3,
+            itemWidth: 100
+        });
+        $('#disable-example9').click(function() {
+            $('#example9').gentleSelect("disable");
+        });
+
+        $('#example10').gentleSelect({
+            columns: 3,
+            itemWidth: 100
+        });
+        $('#disable-example10').click(function() {
+            $('#example10').gentleSelect("disable");
+        });
+        $('#enable-example10').click(function() {
+            $('#example10').gentleSelect("enable");
+        });
     });
     </script>
 </head>
@@ -455,6 +473,57 @@
     <tt></tt><a href='#option-disallowEmpty'>disallowEmpty</a></tt>
     is set <tt>true</tt>.
     </p>
+
+    <h3 id='method-clear'>disable</h3>
+    <p>
+        Disable select's dialog to open when clicked. For example
+        <select id='example9'>
+            <option value="1">Apple</option>
+            <option value="2">Orange</option>
+            <option value="3">Banana</option>
+            <option value="4">Mango</option>
+            <option value="5">Pineapple</option>
+            <option value="6">Guava</option>
+            <option value="7">Grape</option>
+            <option value="8">Sugar Cane</option>
+            <option value="9">Durian</option>
+            <option value="10">Plum</option>
+            <option value="11">Apricot</option>
+            <option value="12">Cumquat</option>
+        </select>
+        <button id='disable-example9'>Disable</button>
+
+        <pre>
+        // assssuming gentleSelect() previously initialised
+        $('#selector').gentleSelect("disable");</pre>
+    </p>
+
+    <h3 id='method-clear'>enable</h3>
+    <p>
+        Enable select's dialog to open when clicked. For example
+        <select id='example10'>
+            <option value="1">Apple</option>
+            <option value="2">Orange</option>
+            <option value="3">Banana</option>
+            <option value="4">Mango</option>
+            <option value="5">Pineapple</option>
+            <option value="6">Guava</option>
+            <option value="7">Grape</option>
+            <option value="8">Sugar Cane</option>
+            <option value="9">Durian</option>
+            <option value="10">Plum</option>
+            <option value="11">Apricot</option>
+            <option value="12">Cumquat</option>
+        </select>
+        <button id='disable-example10'>Disable</button>
+        <button id='enable-example10'>Enable</button>
+
+        <pre>
+        // assssuming gentleSelect() previously initialised
+        $('#selector').gentleSelect("enable");</pre>
+
+    </p>
+
     
 </div>
 <div id='footer'>

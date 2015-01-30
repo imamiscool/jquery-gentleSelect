@@ -115,6 +115,18 @@
     }
 
     var methods = {
+        disable: function(){
+            var $label = $(this).siblings('.gentleselect-label');
+            $label.unbind("click.gentleselect", event_handlers.labelClick);
+
+            return this;
+        },
+        enable: function(){
+            var $label = $(this).siblings('.gentleselect-label');
+            $label.bind("click.gentleselect", event_handlers.labelClick);
+
+            return this;
+        },
         init : function(options) {
             var o = $.extend({}, defaults, options),
                 select_items = this.find("option");
